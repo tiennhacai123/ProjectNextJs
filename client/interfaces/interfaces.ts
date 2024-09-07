@@ -5,7 +5,7 @@ export interface Users {
     email:string,
     role: number,
     profilePicture:string
-    status:string,
+    status:boolean,
 }
 
 export interface Courses {

@@ -1,25 +1,87 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "username": "user1",
-            "password": "123456",
-            "email": "user1@example.com",
-            "role": 1,
-            "profilePicture": "https://e7.pngegg.com/pngimages/250/129/png-clipart-cat-youtube-humour-blog-russia-cat-mammal-animals.png",
-            "status": "active"
-        },
-        {
-            "id": 2,
-            "username": "user2",
-            "password": "123456789",
-            "email": "user2@example.com",
-            "role": 0,
-            "profilePicture": "https://e7.pngegg.com/pngimages/250/129/png-clipart-cat-youtube-humour-blog-russia-cat-mammal-animals.png",
-            "status": "active"
-        }
-    ],
-    "courses": [
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "password": "123456",
+      "email": "user1@example.com",
+      "role": 1,
+      "status": true
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "123456789",
+      "email": "user2@example.com",
+      "role": 1,
+      "status": true
+    },
+    {
+      "id": 3,
+      "username": "user3",
+      "password": "password123",
+      "email": "user3@example.com",
+      "role": 2,
+      "status": false
+    },
+    {
+      "id": 4,
+      "username": "user4",
+      "password": "adminpass",
+      "email": "user4@example.com",
+      "role": 3,
+      "status": true
+    },
+    {
+      "id": 5,
+      "username": "user5",
+      "password": "qwerty123",
+      "email": "user5@example.com",
+      "role": 1,
+      "status": false
+    },
+    {
+      "id": 6,
+      "username": "user6",
+      "password": "123qweasd",
+      "email": "user6@example.com",
+      "role": 2,
+      "status": true
+    },
+    {
+      "id": 7,
+      "username": "user7",
+      "password": "zxcvb678",
+      "email": "user7@example.com",
+      "role": 1,
+      "status": true
+    },
+    {
+      "id": 8,
+      "username": "user8",
+      "password": "abcdef123",
+      "email": "user8@example.com",
+      "role": 2,
+      "status": true
+    },
+    {
+      "id": 9,
+      "username": "user9",
+      "password": "password789",
+      "email": "user9@example.com",
+      "role": 3,
+      "status": true
+    },
+    {
+      "id": 10,
+      "username": "user10",
+      "password": "simplepass",
+      "email": "user10@example.com",
+      "role": 1,
+      "status": true
+    }
+  ],
+  "courses": [
     {
       "id": 15,
       "title": "Khóa luyện thi đại học",
@@ -30,8 +92,8 @@
       "title": "Khóa luyện thi THPT",
       "description": "Khóa luyện thi dành cho học sinh lớp 10,11,12"
     }
-    ],
-    "examSubject": [
+  ],
+  "examSubject": [
     {
       "id": 1,
       "courseId": 1,
@@ -50,8 +112,8 @@
       "title": "Hóa học",
       "description": "Luyện thi Hóa học lớp 10"
     }
-    ],
-    "exams": [
+  ],
+  "exams": [
     {
       "id": 1,
       "title": "toán",
@@ -73,14 +135,19 @@
       "duration": 45,
       "examSubjectId": 3
     }
-    ],
-    "questions": [
+  ],
+  "questions": [
     {
       "id": 1,
       "questions": "phương trình có nghiệm x=? X^2-2x+1=0",
       "answer": "1",
       "examId": 1,
-      "option": ["0", "1", "2", "3"]
+      "option": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
     },
     {
       "id": 2,
@@ -94,8 +161,8 @@
         "Tam giác đều"
       ]
     }
-    ],
-    "userAnswer": [
+  ],
+  "userAnswer": [
     {
       "id": 1,
       "userId": 1,
@@ -108,7 +175,7 @@
       "examId": 2,
       "score": 8
     }
-    ],
+  ],
   "comments": [
     {
       "id": 1,
@@ -116,11 +183,11 @@
       "lesson_id": 1,
       "content": "Rất tuyệt vời"
     }
-    ],
-    "admin": [
-      {
-        "email":"admin@example.com",
-        "password":"123456"
-      }
-    ]
+  ],
+  "admin": [
+    {
+      "email": "admin@example.com",
+      "password": "123456"
+    }
+  ]
 }
