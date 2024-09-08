@@ -12,6 +12,7 @@ export interface Courses {
     id:number,
     title:string,
     description:string,
+    totalQuestions:number,
 }
 
 export interface ExamSubjects{

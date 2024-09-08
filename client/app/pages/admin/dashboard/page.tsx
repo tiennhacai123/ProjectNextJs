@@ -21,7 +21,7 @@ import ManageQuestions from '@/components/componentsAdmin/ManageQuestions';
 import { getDataUser } from '@/services/user.service';
 import { getCourses } from '@/services/courses.service';
 import { getQuestions } from '@/services/question.service';
-import { getSubjects } from '@/services/subject.service';
+import { getExamSubjects } from '@/services/subject.service';
 
 export default function Page() {
   const [showDashBoard,setShowDashBoard]=useState<boolean>(false);
@@ -65,7 +65,7 @@ export default function Page() {
     const fetchData = async () =>{
       const users = await getDataUser();
       const courses = await getCourses();
-      const subjects = await getSubjects();
+      const subjects = await getExamSubjects();
       const questions = await getQuestions();
       setCountSubjectExams(subjects.length)
       setCountQuestion(questions.length);
@@ -84,7 +84,7 @@ export default function Page() {
   const handleLogout = () => {
       route.push('../auth/loginAdmin');
     }
-console.log('1223123123213123',countUser);
+// console.log('1223123123213123',countUser);
   return (
     <>
       <nav>
@@ -155,27 +155,27 @@ console.log('1223123123213123',countUser);
           <div className="overview">
             <div className="title">
             <IoHomeOutline />
-            <span className="text">Dashboard</span>
+            <span className="text">Trang Chủ</span>
             </div>
             <div className="boxes">
               <div className="box box1">
               <FaRegUserCircle />
-                <span className="text">Users</span>
+                <span className="text">Người Dùng</span>
                 <span className="number">{countUser}</span>
-              </div>
-              <div className="box box2">
-              <CiFileOn />
-                <span className="text">Subjects Exams</span>
-                <span className="number">{countSubjectExams}</span>
               </div>
               <div className="box box3">
               <CiBookmark />
-                <span className="text">Courses</span>
+                <span className="text">Khoá Thi</span>
                 <span className="number">{countCourses}</span>
+              </div>
+              <div className="box box2">
+              <CiFileOn />
+                <span className="text">Môn Thi</span>
+                <span className="number">{countSubjectExams}</span>
               </div>
               <div className="box box4">
               <BsQuestionSquare />
-                <span className="text">Questions</span>
+                <span className="text">Câu Hỏi</span>
                 <span className="number">{countQuestion}</span>
               </div>
             </div>

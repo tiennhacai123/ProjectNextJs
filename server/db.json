@@ -38,7 +38,7 @@
       "password": "qwerty123",
       "email": "user5@example.com",
       "role": 1,
-      "status": false
+      "status": true
     },
     {
       "id": 6,
@@ -54,7 +54,7 @@
       "password": "zxcvb678",
       "email": "user7@example.com",
       "role": 1,
-      "status": true
+      "status": false
     },
     {
       "id": 8,
@@ -78,39 +78,36 @@
       "password": "simplepass",
       "email": "user10@example.com",
       "role": 1,
-      "status": true
+      "status": false
     }
   ],
   "courses": [
     {
-      "id": 15,
-      "title": "Khóa luyện thi đại học",
-      "description": "Khóa luyện thi cho học sinh chuẩn bị thi đại học"
+      "title": "Khóa luyện thi THPT",
+      "description": "Khóa luyện thi dành cho học sinh lớp 10,11,12,143",
+      "totalQuestions": 15,
+      "id": 2
     },
     {
-      "id": 15,
-      "title": "Khóa luyện thi THPT",
-      "description": "Khóa luyện thi dành cho học sinh lớp 10,11,12"
+      "title": "Khoá Thi Tiếng Anh 123",
+      "description": "Thi Ielt, toeic cho các bạn học sinh sinh viên",
+      "totalQuestions": "10",
+      "id": 187
+    },
+    {
+      "id": 119,
+      "title": "Khoá thi đại học",
+      "description": "Luyện thi toán lý hoá",
+      "totalQuestions": 100
     }
   ],
   "examSubject": [
     {
-      "id": 1,
-      "courseId": 1,
-      "title": "Môn Toán",
-      "description": "Luyện thi đại học môn Toán học"
-    },
-    {
-      "id": 2,
+      "title": "Olympic Toán Quốc Gia",
+      "description": "Dành cho các bạn học sinh cấp 3",
+      "questionNumber": 50,
       "courseId": 2,
-      "title": "Vật lí lớp 11",
-      "description": "Luyện thi Vật lí lớp 11"
-    },
-    {
-      "id": 2,
-      "courseId": 2,
-      "title": "Hóa học",
-      "description": "Luyện thi Hóa học lớp 10"
+      "id": 3
     }
   ],
   "exams": [
@@ -174,14 +171,6 @@
       "userId": 2,
       "examId": 2,
       "score": 8
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "user_id": 1,
-      "lesson_id": 1,
-      "content": "Rất tuyệt vời"
     }
   ],
   "admin": [
