@@ -16,6 +16,7 @@ export const addCourses = async (newCourse: any) => {
   export const deleteCourse = async (courseId: number): Promise<void> => {
     await axios.delete(`${API_URL}/${courseId}`);
   };
+  
  export const updateCourse = async (courseId: number, formData?: { title: string; description: string; totalQuestions: number; }): Promise<void> =>{
     await axios.put(`${API_URL}/${courseId}`, formData);
  }

@@ -10,8 +10,12 @@ export const getExamSubjects = async ():Promise<ExamSubjects[]> => {
 
 export const addExamSubjects = async (newExamSubjects:any) => {
     const reponse = await axios.post(API_URL,newExamSubjects)
-    return reponse.data;
+    return reponse.data;7
 }
 export const deleteExamSubjects = async (id:number):Promise<void>=>{
     await axios.delete(`${API_URL}/${id}`)
+}
+
+export const updateExamSubjects = async (id:number, formData?: {title:string, courseId:number,description:string, questionNumbers: number }):Promise<void>=>{
+    await axios.put(`${API_URL}/${id}`,formData);
 }

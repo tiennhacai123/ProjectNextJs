@@ -20,6 +20,7 @@ export interface ExamSubjects{
     title:string,
     description:string,
     courseId:number,
+    questionNumbers:number,
 }
 
 export interface Exams {

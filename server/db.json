@@ -6,7 +6,7 @@
       "password": "123456",
       "email": "user1@example.com",
       "role": 1,
-      "status": true
+      "status": false
     },
     {
       "id": 2,
@@ -99,15 +99,35 @@
       "title": "Khoá thi đại học",
       "description": "Luyện thi toán lý hoá",
       "totalQuestions": 100
+    },
+    {
+      "id": 375,
+      "title": "Khoá Thi cấp 2",
+      "description": "Khoá luyện thi dành cho các bạn lớp 5",
+      "totalQuestions": 100
     }
   ],
   "examSubject": [
     {
       "title": "Olympic Toán Quốc Gia",
       "description": "Dành cho các bạn học sinh cấp 3",
-      "questionNumber": 50,
+      "questionNumbers": 50,
       "courseId": 2,
       "id": 3
+    },
+    {
+      "title": "Olympic Tiếng Anh",
+      "courseId": 375,
+      "description": "Thi cho vui",
+      "questionNumbers": 20,
+      "id": 4
+    },
+    {
+      "title": "Olympic Hoá Học Cấp Tỉnh",
+      "description": "Dành cho các bạn học sinh lớp 10, 11 ,12",
+      "questionNumbers": 50,
+      "courseId": 2,
+      "id": 5
     }
   ],
   "exams": [

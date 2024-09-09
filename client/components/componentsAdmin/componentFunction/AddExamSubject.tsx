@@ -81,7 +81,7 @@ export default function AddExamSubject() {
     const newExamSubject = {
       title: examSubjectName,
       description,
-      questionNumber: parseInt(questionNumber),
+      questionNumbers: parseInt(questionNumber),
       courseId: parseInt(chooseCourses), // Gán id của khóa học đã chọn
     };
 
