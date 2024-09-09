@@ -84,15 +84,9 @@
   "courses": [
     {
       "title": "Khóa luyện thi THPT",
-      "description": "Khóa luyện thi dành cho học sinh lớp 10,11,12,143",
-      "totalQuestions": 15,
+      "description": "Khóa luyện thi dành cho học sinh lớp 10,11,12,13",
+      "totalQuestions": "23",
       "id": 2
-    },
-    {
-      "title": "Khoá Thi Tiếng Anh 123",
-      "description": "Thi Ielt, toeic cho các bạn học sinh sinh viên",
-      "totalQuestions": "10",
-      "id": 187
     },
     {
       "id": 119,
@@ -104,6 +98,12 @@
       "id": 375,
       "title": "Khoá Thi cấp 2",
       "description": "Khoá luyện thi dành cho các bạn lớp 5",
+      "totalQuestions": 100
+    },
+    {
+      "id": 435,
+      "title": "Khoá thi học sinh giỏi môn sinh năm 2024",
+      "description": "Dành cho học sinh tử cấp 1, 2, 3",
       "totalQuestions": 100
     }
   ],
@@ -128,29 +128,46 @@
       "questionNumbers": 50,
       "courseId": 2,
       "id": 5
+    },
+    {
+      "title": "Olympic Vật Lý Cấp Tỉnh",
+      "description": "Dành cho các bạn học sinh lớp 10, 11 ,12",
+      "questionNumbers": 40,
+      "courseId": 2,
+      "id": 6
+    },
+    {
+      "title": "Sinh Học 12",
+      "description": "Dành cho học sinh lớp 12",
+      "questionNumbers": 10,
+      "courseId": 435,
+      "id": 7
     }
   ],
   "exams": [
     {
-      "id": 1,
-      "title": "toán",
-      "description": "Đề thi toán học THPT Chuyên Hùng Vương",
-      "duration": 90,
-      "examSubjectId": 1
+      "title": "Toán cơ bản lớp 11",
+      "examSubjectId": 3,
+      "description": "Đề thi toán học THPT Chuyên Hùng Vương 123",
+      "questionNumbers": "50",
+      "duration": "120",
+      "id": 1
     },
     {
       "id": 2,
       "title": "Đề thi Vật lí cơ bản lớp 11",
       "description": "Đề thi gồm các câu hỏi cơ bản về vật lí lớp 11",
       "duration": 60,
-      "examSubjectId": 2
+      "questionNumbers": 11,
+      "examSubjectId": 6
     },
     {
-      "id": 3,
-      "title": "Đề thi hóa học cơ bản lớp 10",
-      "description": "Đề thi gồm các câu hỏi cơ bản về hóa học lớp 10",
-      "duration": 45,
-      "examSubjectId": 3
+      "title": "Đề thi hóa học nâng cao lớp 12",
+      "examSubjectId": 5,
+      "description": "Danh cho các học sinh lớp 12",
+      "questionNumbers": 10,
+      "duration": 60,
+      "id": 4
     }
   ],
   "questions": [
@@ -159,7 +176,7 @@
       "questions": "phương trình có nghiệm x=? X^2-2x+1=0",
       "answer": "1",
       "examId": 1,
-      "option": [
+      "options": [
         "0",
         "1",
         "2",
@@ -171,12 +188,24 @@
       "questions": "Định lí pytago áp dụng cho tam giác nào",
       "answer": "tam giác vuông",
       "examId": 2,
-      "option": [
+      "options": [
         "Tam giác vuông",
         "Tam giác đều",
         "Tam giác cân",
         "Tam giác đều"
       ]
+    },
+    {
+      "questions": "1+1 = ?",
+      "answer": "2",
+      "examId": 1,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "id": 3
     }
   ],
   "userAnswer": [

@@ -7,13 +7,16 @@ import React, { useEffect, useState } from 'react';
 export default function ViewExamSubject() {
   const [examSubjects, setExamSubjects] = useState<ExamSubjects[]>([]);
   const [courses, setCourses] = useState<Courses[]>([]); // Lưu danh sách các khoá thi
+  // khai bao viec thay doi lua chua chon mon thi, hien thi form
   const [selectedExamSubjects, setSelectedExamSubjects] = useState<ExamSubjects | null>(null)
+  // khai bao form cap nhat mon thi
   const [formData, setFormData] = useState({
     title: '',
     courseId: 0,
-    description: '',
+    description: '',  
     questionNumbers:0,
   })
+  // dung useeffect de lay du lieu ra tu db.json
   useEffect(() => {
     const fetchExamSubject = async () => {
       try {
@@ -56,7 +59,7 @@ export default function ViewExamSubject() {
 
 
     const handleChange = (examSubjectsOld:ExamSubjects) =>{
-      //luu thong tin cua mon thi
+      //luu thong tin cua mon thi vao form cap nhat de tien hanh cap nhat
       setSelectedExamSubjects(examSubjectsOld);
       setFormData({
         title: examSubjectsOld.title,
@@ -92,7 +95,7 @@ export default function ViewExamSubject() {
       <div className="container mx-auto py-6">
         <div className="bg-white shadow-lg rounded-lg">
           <div className="bg-blue-500 p-4 rounded-t-lg">
-            <h6 className="text-white font-semibold">Exams</h6>
+            <h6 className="text-white font-semibold">Danh Sách Môn Thi</h6>
           </div>
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-100">

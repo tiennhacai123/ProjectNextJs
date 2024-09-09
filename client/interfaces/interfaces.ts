@@ -29,11 +29,12 @@ export interface Exams {
     description:string,
     duration:number,
     examSubjectId:number,
+    questionNumbers:number
 }
 
 export interface Questions {
     id:number,
-    question:string,
+    questions:string,
     examId:number,
     options:string[],
     answer:string,
