@@ -82,7 +82,7 @@ export default function Page() {
     };
   }, []);
   const handleLogout = () => {
-      route.push('../auth/loginAdmin');
+      route.push('../pages/loginAdmin');
     }
 // console.log('1223123123213123',countUser);
   return (

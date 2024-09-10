@@ -1,13 +1,29 @@
 export interface Users {
     id:number,
     username:string,
-    password:string | number,
+    password:string,
+    repassword:string ,
     email:string,
     role: number,
     profilePicture:string
     status:boolean,
 }
 
+export interface FormData{
+    username: string,
+    email:string,
+    password:string ,
+    repassword:string ,
+}
+
+  
+  // Định nghĩa interface cho lỗi của form
+  export interface FormErrors {
+    username: string;
+    email: string;
+    password: string ;
+    repassword: string ;
+  }
 export interface Courses {
     id:number,
     title:string,

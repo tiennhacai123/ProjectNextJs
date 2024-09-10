@@ -4,47 +4,59 @@
       "id": 1,
       "username": "user1",
       "password": "123456",
+      "repassword": "123456",
       "email": "user1@example.com",
       "role": 1,
+      "profilePicture": "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/anh-meme-meo-13.jpg",
       "status": false
     },
     {
       "id": 2,
       "username": "user2",
       "password": "123456789",
+      "repassword": "123456789",
       "email": "user2@example.com",
       "role": 1,
+      "profilePicture": "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/anh-meme-meo-13.jpg",
       "status": true
     },
     {
       "id": 3,
       "username": "user3",
       "password": "password123",
+      "repassword": "password123",
       "email": "user3@example.com",
       "role": 2,
+      "profilePicture": "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/anh-meme-meo-13.jpg",
       "status": false
     },
     {
       "id": 4,
       "username": "user4",
       "password": "adminpass",
+      "repassword": "adminpass",
       "email": "user4@example.com",
       "role": 3,
+      "profilePicture": "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/anh-meme-meo-13.jpg",
       "status": true
     },
     {
       "id": 5,
       "username": "user5",
       "password": "qwerty123",
+      "repassword": "qwerty123",
       "email": "user5@example.com",
       "role": 1,
+      "profilePicture": "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/anh-meme-meo-13.jpg",
       "status": true
     },
     {
       "id": 6,
       "username": "user6",
       "password": "123qweasd",
+      "repassword": "123qweasd",
       "email": "user6@example.com",
+      "profilePicture": "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/anh-meme-meo-13.jpg",
       "role": 2,
       "status": true
     },
@@ -52,33 +64,51 @@
       "id": 7,
       "username": "user7",
       "password": "zxcvb678",
+      "repassword": "zxcvb678",
       "email": "user7@example.com",
       "role": 1,
+      "profilePicture": "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/anh-meme-meo-13.jpg",
       "status": false
     },
     {
       "id": 8,
       "username": "user8",
       "password": "abcdef123",
+      "repassword": "abcdef123",
       "email": "user8@example.com",
       "role": 2,
+      "profilePicture": "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/anh-meme-meo-13.jpg",
       "status": true
     },
     {
       "id": 9,
       "username": "user9",
       "password": "password789",
+      "repassword": "password789",
       "email": "user9@example.com",
       "role": 3,
+      "profilePicture": "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/anh-meme-meo-13.jpg",
       "status": true
     },
     {
       "id": 10,
       "username": "user10",
       "password": "simplepass",
+      "repassword": "simplepass",
       "email": "user10@example.com",
       "role": 1,
+      "profilePicture": "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/anh-meme-meo-13.jpg",
       "status": false
+    },
+    {
+      "username": "LHM Vỹ",
+      "email": "vy2006@gmail.com",
+      "password": "123456",
+      "repassword": "123456",
+      "profilePicture": "",
+      "role": 1,
+      "status": false,
+      "id": 11
     }
   ],
   "courses": [
@@ -149,54 +179,64 @@
       "title": "Toán cơ bản lớp 11",
       "examSubjectId": 3,
       "description": "Đề thi toán học THPT Chuyên Hùng Vương 123",
-      "questionNumbers": "50",
+      "questionNumbers": "20",
       "duration": "120",
       "id": 1
     },
     {
-      "id": 2,
       "title": "Đề thi Vật lí cơ bản lớp 11",
+      "examSubjectId": 6,
       "description": "Đề thi gồm các câu hỏi cơ bản về vật lí lớp 11",
+      "questionNumbers": "20",
       "duration": 60,
-      "questionNumbers": 11,
-      "examSubjectId": 6
+      "id": 2
     },
     {
       "title": "Đề thi hóa học nâng cao lớp 12",
       "examSubjectId": 5,
       "description": "Danh cho các học sinh lớp 12",
-      "questionNumbers": 10,
+      "questionNumbers": "20",
       "duration": 60,
       "id": 4
+    },
+    {
+      "title": "Sinh Học 12",
+      "examSubjectId": 7,
+      "description": "Dành cho học sinh lớp 12",
+      "questionNumbers": 20,
+      "duration": 90,
+      "id": 5
     }
   ],
   "questions": [
     {
-      "id": 1,
-      "questions": "phương trình có nghiệm x=? X^2-2x+1=0",
-      "answer": "1",
+      "questions": "Phương trình có nghiệm x=? X^2-2x+1=0",
       "examId": 1,
       "options": [
-        "0",
         "1",
         "2",
+        "3",
+        "0"
+      ],
+      "answer": "1",
+      "question": "Phương trình có nghiệm x=? X^2-2x+1=0s",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "questions": "Phương trình có nghiệm x=? X^2-3x+2=0",
+      "answer": "1 và 2",
+      "examId": 1,
+      "options": [
+        "1 và 2",
+        "0 và 1",
+        "0",
         "3"
       ]
     },
     {
-      "id": 2,
-      "questions": "Định lí pytago áp dụng cho tam giác nào",
-      "answer": "tam giác vuông",
-      "examId": 2,
-      "options": [
-        "Tam giác vuông",
-        "Tam giác đều",
-        "Tam giác cân",
-        "Tam giác đều"
-      ]
-    },
-    {
-      "questions": "1+1 = ?",
+      "id": 3,
+      "questions": "Giá trị của x=? 5x-3=7",
       "answer": "2",
       "examId": 1,
       "options": [
@@ -204,8 +244,872 @@
         "2",
         "3",
         "4"
+      ]
+    },
+    {
+      "id": 4,
+      "questions": "Tìm x=? 3x+4=10",
+      "answer": "2",
+      "examId": 1,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "id": 5,
+      "questions": "Phương trình bậc hai có nghiệm x=? x^2-5x+6=0",
+      "answer": "2 và 3",
+      "examId": 1,
+      "options": [
+        "1 và 2",
+        "2 và 3",
+        "1 và 3",
+        "4 và 5"
+      ]
+    },
+    {
+      "id": 6,
+      "questions": "Giải phương trình x=? 2x+5=9",
+      "answer": "2",
+      "examId": 1,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "id": 7,
+      "questions": "Phương trình có nghiệm x=? 4x-8=0",
+      "answer": "2",
+      "examId": 1,
+      "options": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "id": 8,
+      "questions": "Giá trị của x=? x^2-4=0",
+      "answer": "2 và -2",
+      "examId": 1,
+      "options": [
+        "1 và -1",
+        "2 và -2",
+        "3 và -3",
+        "4 và -4"
+      ]
+    },
+    {
+      "id": 9,
+      "questions": "Phương trình có nghiệm x=? x^2-9=0",
+      "answer": "3 và -3",
+      "examId": 1,
+      "options": [
+        "3 và -3",
+        "1 và -1",
+        "2 và -2",
+        "0 và 1"
+      ]
+    },
+    {
+      "id": 10,
+      "questions": "Tìm x=? 6x-12=0",
+      "answer": "2",
+      "examId": 1,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "id": 11,
+      "questions": "Giá trị của x=? 2x+3=11",
+      "answer": "4",
+      "examId": 1,
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "id": 12,
+      "questions": "Phương trình có nghiệm x=? x^2+4x+4=0",
+      "answer": "-2",
+      "examId": 1,
+      "options": [
+        "-1",
+        "-2",
+        "-3",
+        "0"
+      ]
+    },
+    {
+      "id": 13,
+      "questions": "Tìm x=? 4x+7=15",
+      "answer": "2",
+      "examId": 1,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "id": 14,
+      "questions": "Giải phương trình x=? x^2-10x+25=0",
+      "answer": "5",
+      "examId": 1,
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "id": 15,
+      "questions": "Phương trình có nghiệm x=? x^2-16=0",
+      "answer": "4 và -4",
+      "examId": 1,
+      "options": [
+        "4 và -4",
+        "2 và -2",
+        "1 và -1",
+        "3 và -3"
+      ]
+    },
+    {
+      "id": 16,
+      "questions": "Giá trị của x=? 3x-6=0",
+      "answer": "2",
+      "examId": 1,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "id": 17,
+      "questions": "Phương trình có nghiệm x=? x^2+6x+9=0",
+      "answer": "-3",
+      "examId": 1,
+      "options": [
+        "-1",
+        "-2",
+        "-3",
+        "-4"
+      ]
+    },
+    {
+      "id": 18,
+      "questions": "Giải phương trình x=? 2x+7=15",
+      "answer": "4",
+      "examId": 1,
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "id": 19,
+      "questions": "Phương trình có nghiệm x=? x^2-25=0",
+      "answer": "5 và -5",
+      "examId": 1,
+      "options": [
+        "4 và -4",
+        "3 và -3",
+        "5 và -5",
+        "6 và -6"
+      ]
+    },
+    {
+      "id": 20,
+      "questions": "Tìm x=? 7x-21=0",
+      "answer": "3",
+      "examId": 1,
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "id": 21,
+      "questions": "Tính lực F của một vật có khối lượng 10kg, gia tốc 2m/s²?",
+      "answer": "20 N",
+      "examId": 2,
+      "options": [
+        "10 N",
+        "20 N",
+        "30 N",
+        "40 N"
+      ]
+    },
+    {
+      "id": 22,
+      "questions": "Tính quãng đường đi được của vật có vận tốc 5m/s trong 10s?",
+      "answer": "50 m",
+      "examId": 2,
+      "options": [
+        "5 m",
+        "50 m",
+        "100 m",
+        "25 m"
+      ]
+    },
+    {
+      "id": 23,
+      "questions": "Công suất P của máy thực hiện công 100J trong 20s?",
+      "answer": "5 W",
+      "examId": 2,
+      "options": [
+        "2 W",
+        "5 W",
+        "10 W",
+        "20 W"
+      ]
+    },
+    {
+      "id": 24,
+      "questions": "Một điện trở có điện áp 10V và cường độ dòng điện 2A. Tính R?",
+      "answer": "5 Ω",
+      "examId": 2,
+      "options": [
+        "2 Ω",
+        "5 Ω",
+        "10 Ω",
+        "20 Ω"
+      ]
+    },
+    {
+      "id": 25,
+      "questions": "Vật có khối lượng 2kg ở độ cao 10m. Tính thế năng (g = 9.8 m/s²)?",
+      "answer": "196 J",
+      "examId": 2,
+      "options": [
+        "98 J",
+        "196 J",
+        "100 J",
+        "200 J"
+      ]
+    },
+    {
+      "id": 26,
+      "questions": "Một ô tô có vận tốc 20m/s, khối lượng 1000kg. Tính động năng?",
+      "answer": "200000 J",
+      "examId": 2,
+      "options": [
+        "100000 J",
+        "200000 J",
+        "50000 J",
+        "400000 J"
+      ]
+    },
+    {
+      "id": 27,
+      "questions": "Một lực 50N tác dụng lên vật trong 5m. Tính công W?",
+      "answer": "250 J",
+      "examId": 2,
+      "options": [
+        "200 J",
+        "250 J",
+        "300 J",
+        "100 J"
+      ]
+    },
+    {
+      "id": 28,
+      "questions": "Tính gia tốc của vật thay đổi vận tốc từ 10m/s lên 20m/s trong 5s?",
+      "answer": "2 m/s²",
+      "examId": 2,
+      "options": [
+        "5 m/s²",
+        "2 m/s²",
+        "10 m/s²",
+        "4 m/s²"
+      ]
+    },
+    {
+      "id": 29,
+      "questions": "Tính áp suất của một vật có lực 100N và diện tích 2m²?",
+      "answer": "50 Pa",
+      "examId": 2,
+      "options": [
+        "10 Pa",
+        "50 Pa",
+        "100 Pa",
+        "200 Pa"
+      ]
+    },
+    {
+      "id": 30,
+      "questions": "Tính cường độ dòng điện khi điện áp là 12V và điện trở 4Ω?",
+      "answer": "3 A",
+      "examId": 2,
+      "options": [
+        "2 A",
+        "3 A",
+        "4 A",
+        "6 A"
+      ]
+    },
+    {
+      "id": 31,
+      "questions": "Một vật có khối lượng 5kg chuyển động với vận tốc 3m/s. Tính động năng?",
+      "answer": "22.5 J",
+      "examId": 2,
+      "options": [
+        "30 J",
+        "22.5 J",
+        "15 J",
+        "45 J"
+      ]
+    },
+    {
+      "id": 32,
+      "questions": "Tính quãng đường rơi tự do của vật trong 3s (g = 9.8 m/s²)?",
+      "answer": "44.1 m",
+      "examId": 2,
+      "options": [
+        "29.4 m",
+        "44.1 m",
+        "9.8 m",
+        "58.8 m"
+      ]
+    },
+    {
+      "id": 33,
+      "questions": "Tính nhiệt lượng khi khối lượng nước là 2kg và tăng nhiệt độ 5°C (c = 4200 J/kg°C)?",
+      "answer": "42000 J",
+      "examId": 2,
+      "options": [
+        "21000 J",
+        "42000 J",
+        "84000 J",
+        "50000 J"
+      ]
+    },
+    {
+      "id": 34,
+      "questions": "Một vật có khối lượng 3kg chịu tác dụng lực 15N. Tính gia tốc?",
+      "answer": "5 m/s²",
+      "examId": 2,
+      "options": [
+        "5 m/s²",
+        "3 m/s²",
+        "10 m/s²",
+        "15 m/s²"
+      ]
+    },
+    {
+      "id": 35,
+      "questions": "Công thức tính công của một vật dịch chuyển 6m dưới tác dụng lực 30N?",
+      "answer": "180 J",
+      "examId": 2,
+      "options": [
+        "180 J",
+        "150 J",
+        "200 J",
+        "210 J"
+      ]
+    },
+    {
+      "id": 36,
+      "questions": "Một vật có khối lượng 8kg rơi từ độ cao 5m. Tính thế năng (g = 9.8 m/s²)?",
+      "answer": "392 J",
+      "examId": 2,
+      "options": [
+        "392 J",
+        "196 J",
+        "490 J",
+        "100 J"
+      ]
+    },
+    {
+      "id": 37,
+      "questions": "Tính gia tốc của vật có lực tác dụng 30N và khối lượng 10kg?",
+      "answer": "3 m/s²",
+      "examId": 2,
+      "options": [
+        "3 m/s²",
+        "5 m/s²",
+        "10 m/s²",
+        "2 m/s²"
+      ]
+    },
+    {
+      "id": 38,
+      "questions": "Một lực kéo 40N làm vật dịch chuyển 10m. Tính công?",
+      "answer": "400 J",
+      "examId": 2,
+      "options": [
+        "300 J",
+        "400 J",
+        "500 J",
+        "200 J"
+      ]
+    },
+    {
+      "id": 39,
+      "questions": "Tính trọng lực của một vật có khối lượng 7kg (g = 9.8 m/s²)?",
+      "answer": "68.6 N",
+      "examId": 2,
+      "options": [
+        "70 N",
+        "68.6 N",
+        "60 N",
+        "80 N"
+      ]
+    },
+    {
+      "id": 40,
+      "questions": "Một vật có khối lượng 12kg rơi tự do trong 4s. Tính vận tốc (g = 9.8 m/s²)?",
+      "answer": "39.2 m/s",
+      "examId": 2,
+      "options": [
+        "39.2 m/s",
+        "19.6 m/s",
+        "29.4 m/s",
+        "49 m/s"
+      ]
+    },
+    {
+      "id": 41,
+      "questions": "Tính khối lượng của 0.5 mol H₂O (M = 18 g/mol)?",
+      "answer": "9 g",
+      "examId": 4,
+      "options": [
+        "9 g",
+        "18 g",
+        "27 g",
+        "36 g"
+      ]
+    },
+    {
+      "id": 42,
+      "questions": "Tính số mol của 44g CO₂ (M = 44 g/mol)?",
+      "answer": "1 mol",
+      "examId": 4,
+      "options": [
+        "0.5 mol",
+        "1 mol",
+        "2 mol",
+        "4 mol"
+      ]
+    },
+    {
+      "id": 43,
+      "questions": "Tính thể tích khí H₂ (đktc) khi có 2 mol khí?",
+      "answer": "44.8 lít",
+      "examId": 4,
+      "options": [
+        "22.4 lít",
+        "44.8 lít",
+        "11.2 lít",
+        "33.6 lít"
+      ]
+    },
+    {
+      "id": 44,
+      "questions": "Tính khối lượng của 0.2 mol NaCl (M = 58.5 g/mol)?",
+      "answer": "11.7 g",
+      "examId": 4,
+      "options": [
+        "5.85 g",
+        "11.7 g",
+        "23.4 g",
+        "58.5 g"
+      ]
+    },
+    {
+      "id": 45,
+      "questions": "Tính khối lượng của 3 mol NaOH (M = 40 g/mol)?",
+      "answer": "120 g",
+      "examId": 4,
+      "options": [
+        "40 g",
+        "60 g",
+        "120 g",
+        "160 g"
+      ]
+    },
+    {
+      "id": 46,
+      "questions": "Tính số mol trong 36g H₂O (M = 18 g/mol)?",
+      "answer": "2 mol",
+      "examId": 4,
+      "options": [
+        "1 mol",
+        "2 mol",
+        "0.5 mol",
+        "3 mol"
+      ]
+    },
+    {
+      "id": 47,
+      "questions": "Tính nồng độ mol của dung dịch chứa 2 mol NaCl trong 1 lít nước?",
+      "answer": "2 M",
+      "examId": 4,
+      "options": [
+        "1 M",
+        "2 M",
+        "0.5 M",
+        "3 M"
+      ]
+    },
+    {
+      "id": 48,
+      "questions": "Tính khối lượng của 0.25 mol CaCO₃ (M = 100 g/mol)?",
+      "answer": "25 g",
+      "examId": 4,
+      "options": [
+        "25 g",
+        "50 g",
+        "75 g",
+        "100 g"
+      ]
+    },
+    {
+      "id": 49,
+      "questions": "Tính thể tích khí O₂ (đktc) chứa 0.5 mol khí?",
+      "answer": "11.2 lít",
+      "examId": 4,
+      "options": [
+        "22.4 lít",
+        "11.2 lít",
+        "5.6 lít",
+        "44.8 lít"
+      ]
+    },
+    {
+      "id": 50,
+      "questions": "Tính khối lượng của 1 mol H₂SO₄ (M = 98 g/mol)?",
+      "answer": "98 g",
+      "examId": 4,
+      "options": [
+        "49 g",
+        "98 g",
+        "196 g",
+        "100 g"
+      ]
+    },
+    {
+      "id": 51,
+      "questions": "Tính khối lượng của 0.1 mol HCl (M = 36.5 g/mol)?",
+      "answer": "3.65 g",
+      "examId": 4,
+      "options": [
+        "3.65 g",
+        "36.5 g",
+        "1.825 g",
+        "7.3 g"
+      ]
+    },
+    {
+      "id": 52,
+      "questions": "Tính số mol của 90g Glucose (C₆H₁₂O₆, M = 180 g/mol)?",
+      "answer": "0.5 mol",
+      "examId": 4,
+      "options": [
+        "0.25 mol",
+        "0.5 mol",
+        "1 mol",
+        "2 mol"
+      ]
+    },
+    {
+      "id": 53,
+      "questions": "Tính thể tích khí CO₂ (đktc) của 0.25 mol khí?",
+      "answer": "5.6 lít",
+      "examId": 4,
+      "options": [
+        "5.6 lít",
+        "11.2 lít",
+        "22.4 lít",
+        "44.8 lít"
+      ]
+    },
+    {
+      "id": 54,
+      "questions": "Tính khối lượng của 0.1 mol Na₂CO₃ (M = 106 g/mol)?",
+      "answer": "10.6 g",
+      "examId": 4,
+      "options": [
+        "10.6 g",
+        "21.2 g",
+        "5.3 g",
+        "42.4 g"
+      ]
+    },
+    {
+      "id": 55,
+      "questions": "Tính khối lượng của 2 mol Fe₂O₃ (M = 160 g/mol)?",
+      "answer": "320 g",
+      "examId": 4,
+      "options": [
+        "160 g",
+        "320 g",
+        "480 g",
+        "640 g"
+      ]
+    },
+    {
+      "id": 56,
+      "questions": "Tính nồng độ mol của dung dịch chứa 0.5 mol HCl trong 2 lít nước?",
+      "answer": "0.25 M",
+      "examId": 4,
+      "options": [
+        "0.5 M",
+        "0.25 M",
+        "1 M",
+        "2 M"
+      ]
+    },
+    {
+      "id": 57,
+      "questions": "Tính số mol của 49g H₂SO₄ (M = 98 g/mol)?",
+      "answer": "0.5 mol",
+      "examId": 4,
+      "options": [
+        "0.5 mol",
+        "1 mol",
+        "0.25 mol",
+        "2 mol"
+      ]
+    },
+    {
+      "id": 58,
+      "questions": "Tính khối lượng của 1.5 mol NaCl (M = 58.5 g/mol)?",
+      "answer": "87.75 g",
+      "examId": 4,
+      "options": [
+        "58.5 g",
+        "87.75 g",
+        "116.5 g",
+        "29.25 g"
+      ]
+    },
+    {
+      "id": 59,
+      "questions": "Tính số mol của 36g H₂O (M = 18 g/mol)?",
+      "answer": "2 mol",
+      "examId": 4,
+      "options": [
+        "1 mol",
+        "2 mol",
+        "0.5 mol",
+        "3 mol"
+      ]
+    },
+    {
+      "questions": "Tính thể tích khí N₂ (đktc) chứa 1 mol khí?",
+      "examId": 4,
+      "options": [
+        "11.2 lít",
+        "22.4 lít",
+        "5.6 lít",
+        "44.8 lít"
       ],
-      "id": 3
+      "answer": "22.4 l",
+      "question": "Tính thể tích khí N₂ (đktc) chứa 1 mol khí",
+      "id": 60
+    },
+    {
+      "id": 61,
+      "questions": "Chức năng của ADN là gì?",
+      "answer": "Lưu trữ thông tin di truyền",
+      "examId": 5,
+      "options": [
+        "Lưu trữ thông tin di truyền",
+        "Cung cấp năng lượng",
+        "Bảo vệ tế bào",
+        "Vận chuyển oxy"
+      ]
+    },
+    {
+      "id": 62,
+      "questions": "Cơ quan nào sản xuất insulin?",
+      "answer": "Tuyến tụy",
+      "examId": 5,
+      "options": [
+        "Tuyến tụy",
+        "Gan",
+        "Thận",
+        "Phổi"
+      ]
+    },
+    {
+      "id": 63,
+      "questions": "Nguyên tố nào cần thiết cho quá trình hô hấp của cây?",
+      "answer": "Oxy",
+      "examId": 5,
+      "options": [
+        "Oxy",
+        "Nitơ",
+        "Cacbon",
+        "Photpho"
+      ]
+    },
+    {
+      "id": 64,
+      "questions": "Đơn vị cơ bản của sự sống là gì?",
+      "answer": "Tế bào",
+      "examId": 5,
+      "options": [
+        "Tế bào",
+        "ADN",
+        "Protein",
+        "Enzyme"
+      ]
+    },
+    {
+      "id": 65,
+      "questions": "Tế bào thực vật có gì khác với tế bào động vật?",
+      "answer": "Thành tế bào",
+      "examId": 5,
+      "options": [
+        "Thành tế bào",
+        "Màng sinh chất",
+        "Ty thể",
+        "Ribosome"
+      ]
+    },
+    {
+      "id": 66,
+      "questions": "Động vật nào có hệ tuần hoàn hở?",
+      "answer": "Chân khớp",
+      "examId": 5,
+      "options": [
+        "Chân khớp",
+        "Lưỡng cư",
+        "Cá",
+        "Chim"
+      ]
+    },
+    {
+      "id": 67,
+      "questions": "ADN nằm ở đâu trong tế bào?",
+      "answer": "Nhân tế bào",
+      "examId": 5,
+      "options": [
+        "Nhân tế bào",
+        "Màng sinh chất",
+        "Ribosome",
+        "Lục lạp"
+      ]
+    },
+    {
+      "questions": "Quá trình nào chuyển hóa glucose thành năng lượng?",
+      "examId": 5,
+      "options": [
+        "Hô hấp tế bào",
+        "Quang hợp",
+        "Vận chuyển thụ động",
+        "Sinh sản"
+      ],
+      "answer": "Hô hấp tế bào",
+      "id": 68
+    },
+    {
+      "id": 69,
+      "questions": "Vai trò của ti thể trong tế bào?",
+      "answer": "Tạo năng lượng",
+      "examId": 5,
+      "options": [
+        "Tạo năng lượng",
+        "Lưu trữ thông tin di truyền",
+        "Điều khiển tế bào",
+        "Bảo vệ tế bào"
+      ]
+    },
+    {
+      "id": 70,
+      "questions": "Thực vật thực hiện quá trình quang hợp ở cơ quan nào?",
+      "answer": "Lá",
+      "examId": 5,
+      "options": [
+        "Lá",
+        "Rễ",
+        "Thân",
+        "Hoa"
+      ]
+    },
+    {
+      "id": 71,
+      "questions": "Hồng cầu có chức năng gì?",
+      "answer": "Vận chuyển oxy",
+      "examId": 5,
+      "options": [
+        "Vận chuyển oxy",
+        "Tạo kháng thể",
+        "Tiêu hóa thức ăn",
+        "Dự trữ mỡ"
+      ]
+    },
+    {
+      "id": 72,
+      "questions": "Chất nào là thành phần chính của màng sinh chất?",
+      "answer": "Phospholipid",
+      "examId": 5,
+      "options": [
+        "Phospholipid",
+        "Protein",
+        "Glucose",
+        "ADN"
+      ]
+    },
+    {
+      "id": 73,
+      "questions": "Loại tế bào nào chịu trách nhiệm bảo vệ cơ thể khỏi vi khuẩn?",
+      "answer": "Bạch cầu",
+      "examId": 5,
+      "options": [
+        "Bạch cầu",
+        "Hồng cầu",
+        "Tiểu cầu",
+        "Tế bào thần kinh"
+      ]
+    },
+    {
+      "id": 74,
+      "questions": "Vai trò của lục lạp trong tế bào thực vật?",
+      "answer": "Quang hợp",
+      "examId": 5,
+      "options": [
+        "Quang hợp",
+        "Tạo năng lượng",
+        "Vận chuyển nước",
+        "Phân giải protein"
+      ]
+    },
+    {
+      "id": 75,
+      "questions": "Bộ phận nào của cơ thể người sản xuất kháng thể?",
+      "answer": "Hệ miễn dịch",
+      "examId": 5,
+      "options": [
+        "Hệ miễn dịch",
+        "Hệ tiêu hóa",
+        "Hệ tuần hoàn",
+        "Hệ hô hấp"
+      ]
     }
   ],
   "userAnswer": [

@@ -16,7 +16,7 @@ const LoginAdmin: React.FC = () => {
       const admin = admins.find((admin: { email: string; password: any; }) => admin.email === email && String(admin.password) === password);
       if (admin) {
         alert('Đăng nhập thành công');
-        router.push('/pages/admin/dashboard');
+        router.push('/pages/dashboard');
       } else {
         setError('Email hoặc mật khẩu sai');
       }

@@ -114,6 +114,7 @@ export default function ViewQuestion() {
                 <th className="px-4 py-2 text-left text-gray-600">STT</th>
                 <th className="px-4 py-2 text-left text-gray-600">Câu Hỏi</th>
                 <th className="px-4 py-2 text-left text-gray-600">Môn Thi</th>
+                <th className="px-4 py-2 text-left text-gray-600">Câu Trả Lời </th>
                 <th className="px-4 py-2 text-left text-gray-600">Câu Trả Lời Đúng</th>
                 <th className="px-4 py-2 text-left text-gray-600">Chức năng</th>
               </tr>
@@ -124,6 +125,7 @@ export default function ViewQuestion() {
                   <td className="px-4 py-2">{index + 1}</td>
                   <td className="px-4 py-2">{question.questions}</td>
                   <td className="px-4 py-2">{findExamTitle(question.examId)}</td>
+                  <td className="px-4 py-2">{question.options.join(',')}</td>
                   <td className="px-4 py-2">{question.answer}</td>
                   <td className="px-4 py-2">
                     <button
