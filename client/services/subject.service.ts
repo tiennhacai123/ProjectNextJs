@@ -19,3 +19,8 @@ export const deleteExamSubjects = async (id:number):Promise<void>=>{
 export const updateExamSubjects = async (id:number, formData?: {title:string, courseId:number,description:string, questionNumbers: number }):Promise<void>=>{
     await axios.put(`${API_URL}/${id}`,formData);
 }
+
+export const getExamSubjectsByCourseId = async (courseId: number): Promise<ExamSubjects[]> => {
+    const response = await axios.get(`${API_URL}?courseId=${courseId}`);
+    return response.data;
+  };

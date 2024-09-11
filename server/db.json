@@ -107,7 +107,7 @@
       "repassword": "123456",
       "profilePicture": "",
       "role": 1,
-      "status": false,
+      "status": true,
       "id": 11
     }
   ],
@@ -116,25 +116,57 @@
       "title": "Khóa luyện thi THPT",
       "description": "Khóa luyện thi dành cho học sinh lớp 10,11,12,13",
       "totalQuestions": "23",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fcourse2.jpg?alt=media&token=b9c3b0c7-c5c5-4e72-a9aa-a171ab38032c",
       "id": 2
     },
     {
       "id": 119,
       "title": "Khoá thi đại học",
       "description": "Luyện thi toán lý hoá",
-      "totalQuestions": 100
+      "totalQuestions": 100,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fcourse3.jpg?alt=media&token=af9a768b-f524-406c-93ec-fbeb118d9d68"
     },
     {
-      "id": 375,
-      "title": "Khoá Thi cấp 2",
-      "description": "Khoá luyện thi dành cho các bạn lớp 5",
-      "totalQuestions": 100
+      "title": "Khoá Thi cấp 1",
+      "description": "Khoá luyện thi dành cho các bạn lớp 1",
+      "totalQuestions": 49,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fcourse4.jpg?alt=media&token=852dda6f-f1be-4aa1-8a40-7b3a05549911",
+      "id": 375
     },
     {
       "id": 435,
       "title": "Khoá thi học sinh giỏi môn sinh năm 2024",
       "description": "Dành cho học sinh tử cấp 1, 2, 3",
-      "totalQuestions": 100
+      "totalQuestions": 100,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fcourse5.jpg?alt=media&token=5211cdcb-431e-4b54-a1b6-e8a210af181e"
+    },
+    {
+      "id": 760,
+      "title": "Khoá luyên thi DGNL",
+      "description": "Kỳ thi đánh giá năng lực cho các bạn lớp 12",
+      "totalQuestions": 100,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fcourse6.jpg?alt=media&token=2637ed32-6e6e-47be-93fd-96d6ef54343f"
+    },
+    {
+      "title": "Khoá Luyện Thi Toeic",
+      "description": "Dành Cho Các Bạn Muốn Lấy 800+ ",
+      "totalQuestions": 200,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fcourse1.jpg?alt=media&token=7d78ee0b-9a8c-41df-a691-2ca7c53adc6d",
+      "id": 66
+    },
+    {
+      "id": 617,
+      "title": "Khoá Học Tiếng Nga ",
+      "description": "Dành cho người có nhu cầu du học Nga",
+      "totalQuestions": 50,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fcourse1.jpg?alt=media&token=0c619e64-8b6a-4f82-a2c2-c2d2edfa6eca"
+    },
+    {
+      "id": 913,
+      "title": "Khoá luyện thi cấp 2",
+      "description": "Khoá luyện thi dành cho các bạn lớp5",
+      "totalQuestions": 40,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub2.jpg?alt=media&token=7514e2b8-4c7a-472a-9198-907f8596ee6c"
     }
   ],
   "examSubject": [
@@ -143,6 +175,7 @@
       "description": "Dành cho các bạn học sinh cấp 3",
       "questionNumbers": 50,
       "courseId": 2,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub3.jpg?alt=media&token=89070891-c4a3-4ee0-95a3-8adc84e85df0",
       "id": 3
     },
     {
@@ -150,6 +183,7 @@
       "courseId": 375,
       "description": "Thi cho vui",
       "questionNumbers": 20,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub1.jpg?alt=media&token=ff85651a-c0e3-4407-b8cb-66cd96391d01",
       "id": 4
     },
     {
@@ -157,6 +191,7 @@
       "description": "Dành cho các bạn học sinh lớp 10, 11 ,12",
       "questionNumbers": 50,
       "courseId": 2,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub4.jpg?alt=media&token=6254e45d-e68a-46d6-be3e-9ecbfb533277",
       "id": 5
     },
     {
@@ -164,6 +199,7 @@
       "description": "Dành cho các bạn học sinh lớp 10, 11 ,12",
       "questionNumbers": 40,
       "courseId": 2,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub2.jpg?alt=media&token=07084a9c-82cc-40e5-bfe4-32376da4b4c1",
       "id": 6
     },
     {
@@ -171,7 +207,16 @@
       "description": "Dành cho học sinh lớp 12",
       "questionNumbers": 10,
       "courseId": 435,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub5.jpg?alt=media&token=5bd2f2c3-1222-40d2-846f-b4dacd051831",
       "id": 7
+    },
+    {
+      "title": "Tiếng Anh 20 câu",
+      "courseId": 66,
+      "description": "Dành cho 100+",
+      "questionNumbers": "20",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub1.jpg?alt=media&token=ff85651a-c0e3-4407-b8cb-66cd96391d01",
+      "id": 8
     }
   ],
   "exams": [
@@ -181,6 +226,7 @@
       "description": "Đề thi toán học THPT Chuyên Hùng Vương 123",
       "questionNumbers": "20",
       "duration": "120",
+      "image":"https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam2.jpg?alt=media&token=e4a927fc-0589-410d-8b12-bc14f4c67dd8",
       "id": 1
     },
     {
@@ -189,6 +235,7 @@
       "description": "Đề thi gồm các câu hỏi cơ bản về vật lí lớp 11",
       "questionNumbers": "20",
       "duration": 60,
+      "image":"https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam3.jpg?alt=media&token=3f083413-74d7-4d9c-9520-cfbc1a705d7b",
       "id": 2
     },
     {
@@ -197,6 +244,7 @@
       "description": "Danh cho các học sinh lớp 12",
       "questionNumbers": "20",
       "duration": 60,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam4.jpg?alt=media&token=02cda876-0ee7-4486-a115-4d4fc7be180e",
       "id": 4
     },
     {
@@ -205,7 +253,17 @@
       "description": "Dành cho học sinh lớp 12",
       "questionNumbers": 20,
       "duration": 90,
+      "image":"https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam1.jpg?alt=media&token=358a7cad-4348-467e-8343-6f72cbd1b2cd",
       "id": 5
+    },
+    {
+      "title": "Tiếng anh cấp quốc gia nawm 2024",
+      "examSubjectId": 4,
+      "description": "Dành cho các học sinh lớp 5,9,12 tham gia",
+      "questionNumbers": "69",
+      "duration": "96",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam5.jpg?alt=media&token=7c2c9d82-2fa5-4f1c-9afb-6bf5151a0275",
+      "id": 6
     }
   ],
   "questions": [

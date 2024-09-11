@@ -27,7 +27,7 @@ export default function ManageExams() {
       <div className="bg-green-500 rounded-lg shadow-lg p-6">
         <div className="flex justify-between items-center">
           <h6 className="text-white text-lg font-semibold">
-          <p onClick={()=>{setShowAddExam(false); setShowViewExam(true) }} className="no-underline text-white">Danh Sách Môn Thi</p>
+          <p onClick={()=>{setShowAddExam(false); setShowViewExam(true) }} className="no-underline text-white">Danh Sách Đề Thi</p>
           </h6>
           <h2 className="text-right text-white text-2xl">
             <i className="fas fa-eye"></i>

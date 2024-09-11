@@ -3,17 +3,19 @@
 import { Courses } from '@/interfaces/interfaces';
 import { addCourses, getCourses } from '@/services/courses.service';
 import React, { useEffect, useState } from 'react';
+import { uploadImage } from '@/config/firebase'; // Import the uploadImage function
 
 export default function AddCourse() {
   const [courses, setCourses] = useState<Courses[]>([]);
   const [courseName, setCourseName] = useState('');
   const [description, setDescriptions] = useState('');
   const [questionNumber, setQuestionNumber] = useState('');
+  const [image, setImage] = useState<File | null>(null);
   const [errors, setErrors] = useState({
     courseName: '',
     description: '',
     questionNumber: '',
-    totalMarks: '',
+    image: '',
   });
   const [successMessage, setSuccessMessage] = useState('');
 
@@ -29,7 +31,13 @@ export default function AddCourse() {
     fetchCourses();
   }, []);
 
-  const handleSubmit = async (e: React.ChangeEvent<HTMLFormElement>) => {
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setImage(e.target.files[0]);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Reset lỗi và thông báo thành công
@@ -37,7 +45,7 @@ export default function AddCourse() {
       courseName: '',
       description: '',
       questionNumber: '',
-      totalMarks: '',
+      image: '',
     });
     setSuccessMessage('');
 
@@ -47,7 +55,7 @@ export default function AddCourse() {
       courseName: '',
       description: '',
       questionNumber: '',
-      totalMarks: '',
+      image: '',
     };
 
     if (!courseName) {
@@ -65,24 +73,37 @@ export default function AddCourse() {
       hasError = true;
     }
 
+    if (!image) {
+      newErrors.image = 'Vui lòng chọn ảnh';
+      hasError = true;
+    }
+
     if (hasError) {
       setErrors(newErrors);
       return;
     }
 
-    const newCourse = {
-      id: Math.floor(Math.random() * 1000),
-      title: courseName,
-      description: description,
-      totalQuestions: parseInt(questionNumber),
-    };
-
     try {
+      let imageURL = '';
+      if (image) {
+        imageURL = await uploadImage(image);
+      }
+
+      const newCourse: Courses = {
+        id: Math.floor(Math.random() * 1000),
+        title: courseName,
+        description: description,
+        totalQuestions: parseInt(questionNumber),
+        image: imageURL,
+      };
+
       const addedCourse = await addCourses(newCourse);
       setCourses((prevCourses) => [...prevCourses, addedCourse]);
+
       setCourseName('');
       setDescriptions('');
       setQuestionNumber('');
+      setImage(null);
       setSuccessMessage('Thêm Khoá Học Thành Công');
     } catch (err) {
       console.log(err);
@@ -133,6 +154,17 @@ export default function AddCourse() {
               className={`form-control w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 ${errors.questionNumber ? 'border-red-500' : ''}`}
             />
             {errors.questionNumber && <p className="text-red-500 text-sm">{errors.questionNumber}</p>}
+          </div>
+          <div className="form-group">
+            <label htmlFor="image" className="block text-gray-700 font-medium">Ảnh</label>
+            <input
+              type="file"
+              id="image"
+              name="image"
+              onChange={handleImageChange}
+              className={`form-control w-full mt-1 p-2 border border-gray-300 rounded-lg ${errors.image ? 'border-red-500' : ''}`}
+            />
+            {errors.image && <p className="text-red-500 text-sm">{errors.image}</p>}
           </div>
         </div>
         {successMessage && <p className="text-green-500 text-center mt-4">{successMessage}</p>}

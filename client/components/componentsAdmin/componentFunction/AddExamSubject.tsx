@@ -3,6 +3,7 @@
 import { Courses } from '@/interfaces/interfaces';
 import { getCourses } from '@/services/courses.service';
 import { addExamSubjects } from '@/services/subject.service';
+import { uploadImage } from '@/config/firebase'; // Ensure you have this service
 import React, { useEffect, useState } from 'react';
 
 export default function AddExamSubject() {
@@ -11,11 +12,13 @@ export default function AddExamSubject() {
   const [description, setDescription] = useState('');
   const [questionNumber, setQuestionNumber] = useState('');
   const [courses, setCourses] = useState<Courses[]>([]); // Lưu danh sách khóa học
+  const [image, setImage] = useState<File | null>(null); // State để lưu hình ảnh
   const [errors, setErrors] = useState({
     examSubjectName: '',
     description: '',
     questionNumber: '',
     chooseCourses: '',
+    image: '',
   });
   const [successMessage, setSuccessMessage] = useState('');
 
@@ -40,6 +43,7 @@ export default function AddExamSubject() {
       description: '',
       questionNumber: '',
       chooseCourses: '',
+      image: '',
     });
     setSuccessMessage('');
 
@@ -50,6 +54,7 @@ export default function AddExamSubject() {
       description: '',
       questionNumber: '',
       chooseCourses: '',
+      image: '',
     };
 
     if (!examSubjectName) {
@@ -72,25 +77,39 @@ export default function AddExamSubject() {
       hasError = true;
     }
 
+    if (!image) {
+      newErrors.image = 'Vui lòng chọn một hình ảnh';
+      hasError = true;
+    }
+
     if (hasError) {
       setErrors(newErrors);
       return;
     }
 
-    // Tạo đối tượng môn thi mới
-    const newExamSubject = {
-      title: examSubjectName,
-      description,
-      questionNumbers: parseInt(questionNumber),
-      courseId: parseInt(chooseCourses), // Gán id của khóa học đã chọn
-    };
-
     try {
+      let imageUrl = '';
+
+      if (image) {
+        // Upload image and get the URL
+        imageUrl = await uploadImage(image);
+      }
+
+      // Tạo đối tượng môn thi mới
+      const newExamSubject = {
+        title: examSubjectName,
+        description,
+        questionNumbers: parseInt(questionNumber),
+        courseId: parseInt(chooseCourses), // Gán id của khóa học đã chọn
+        image: imageUrl, // Thêm URL hình ảnh vào đối tượng môn thi
+      };
+
       await addExamSubjects(newExamSubject);
       setExamSubjectName('');
       setDescription('');
       setChooseCourses('');
-      setQuestionNumber('')
+      setQuestionNumber('');
+      setImage(null); // Reset image state
       setSuccessMessage('Môn thi đã được thêm thành công');
     } catch (error) {
       console.log('Có lỗi khi thêm môn thi', error);
@@ -102,6 +121,7 @@ export default function AddExamSubject() {
       <h2 className="text-center text-blue-500 text-2xl font-semibold mb-8">Thêm Môn Thi</h2>
       <form onSubmit={handleSubmit} autoComplete="off" className="mx-auto max-w-lg p-6 bg-gray-100 rounded-lg shadow-lg">
         <div className="space-y-4">
+          {/* Existing inputs */}
           <div className="form-group">
             <label htmlFor="exam_subject_name" className="block text-gray-700 font-medium">Tên Môn Thi</label>
             <input
@@ -161,6 +181,20 @@ export default function AddExamSubject() {
               className={`form-control w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 ${errors.questionNumber ? 'border-red-500' : ''}`}
             />
             {errors.questionNumber && <p className="text-red-500 text-sm">{errors.questionNumber}</p>}
+          </div>
+
+          {/* New image input */}
+          <div className="form-group">
+            <label htmlFor="image" className="block text-gray-700 font-medium">Hình Ảnh</label>
+            <input
+              type="file"
+              id="image"
+              name="image"
+              accept="image/*"
+              onChange={(e) => setImage(e.target.files ? e.target.files[0] : null)}
+              className={`form-control w-full mt-1 p-2 border border-gray-300 rounded-lg ${errors.image ? 'border-red-500' : ''}`}
+            />
+            {errors.image && <p className="text-red-500 text-sm">{errors.image}</p>}
           </div>
         </div>
 

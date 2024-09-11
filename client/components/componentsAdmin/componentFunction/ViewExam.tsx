@@ -55,6 +55,7 @@ export default function ViewExam() {
       description:'',
       questionNumbers:0,
       duration:0,
+      image:'',
     });
     
     const handleChange = (examOld:Exams) =>{
@@ -65,7 +66,8 @@ export default function ViewExam() {
         examSubjectId: examOld.examSubjectId,
         description: examOld.description,
         questionNumbers: examOld.questionNumbers,
-        duration: examOld.duration
+        duration: examOld.duration,
+        image:examOld.image
       });
     };
 

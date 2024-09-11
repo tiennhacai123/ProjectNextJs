@@ -15,6 +15,7 @@ export default function ViewExamSubject() {
     courseId: 0,
     description: '',  
     questionNumbers:0,
+    image:'',
   })
   // dung useeffect de lay du lieu ra tu db.json
   useEffect(() => {
@@ -66,6 +67,7 @@ export default function ViewExamSubject() {
         courseId: examSubjectsOld.courseId,
         description: examSubjectsOld.description,
         questionNumbers: examSubjectsOld.questionNumbers,
+        image:examSubjectsOld.image,
       });
     };
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {

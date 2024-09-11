@@ -9,7 +9,10 @@ export default function ViewCourses() {
     title: '',
     description: '',
     totalQuestions: 0,
+    image: '' // Thêm trường image
   });
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     const fetchCourses = async () => {
@@ -18,6 +21,7 @@ export default function ViewCourses() {
         setCourses(coursesData);
       } catch (err) {
         console.log(err);
+        setErrorMessage('Có lỗi xảy ra khi tải dữ liệu khóa học');
       }
     };
     fetchCourses();
@@ -29,8 +33,10 @@ export default function ViewCourses() {
       setCourses((prevCourses) =>
         prevCourses.filter((course) => course.id !== courseId)
       );
+      setSuccessMessage('Xóa khóa học thành công');
     } catch (err) {
       console.log(err);
+      setErrorMessage('Có lỗi xảy ra khi xóa khóa học');
     }
   };
 
@@ -40,6 +46,7 @@ export default function ViewCourses() {
       title: course.title,
       description: course.description,
       totalQuestions: course.totalQuestions,
+      image: course.image // Lưu hình ảnh hiện tại
     });
   };
 
@@ -61,8 +68,10 @@ export default function ViewCourses() {
           )
         );
         setSelectedCourse(null); // Đóng form sau khi cập nhật
+        setSuccessMessage('Cập nhật khóa học thành công');
       } catch (err) {
         console.log(err);
+        setErrorMessage('Có lỗi xảy ra khi cập nhật khóa học');
       }
     }
   };
@@ -72,13 +81,13 @@ export default function ViewCourses() {
       <div className="container mx-auto py-6">
         <div className="bg-white shadow-lg rounded-lg">
           <div className="bg-blue-500 p-4 rounded-t-lg">
-            <h6 className="text-white font-semibold">Khoá Thi</h6>
+            <h6 className="text-white font-semibold">Khóa Thi</h6>
           </div>
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-100">
               <tr>
                 <th className="px-4 py-2 text-left text-gray-600">STT</th>
-                <th className="px-4 py-2 text-left text-gray-600">Tên Khoá Thi</th>
+                <th className="px-4 py-2 text-left text-gray-600">Tên Khóa Thi</th>
                 <th className="px-4 py-2 text-left text-gray-600">Mô tả</th>
                 <th className="px-4 py-2 text-left text-gray-600">Chức năng</th>
               </tr>
@@ -115,6 +124,8 @@ export default function ViewCourses() {
       {selectedCourse && (
         <div className="mt-6 bg-white p-4 rounded-lg shadow-lg">
           <h3 className="text-lg font-semibold mb-4">Cập Nhật Khóa Học</h3>
+          {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+          {successMessage && <p className="text-green-500">{successMessage}</p>}
           <div className="mb-4">
             <label className="block text-gray-700">Tên Khóa Học</label>
             <input
@@ -145,6 +156,16 @@ export default function ViewCourses() {
               className="w-full p-2 border border-gray-300 rounded"
             />
           </div>
+          {/* <div className="mb-4">
+            <label className="block text-gray-700">Hình ảnh</label>
+            <div className="mb-2">
+              <img
+                src={selectedCourse.image}
+                alt="Course"
+                className="w-full h-48 object-cover"
+              />
+            </div>
+          </div> */}
           <button
             onClick={handleUpdate}
             className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"

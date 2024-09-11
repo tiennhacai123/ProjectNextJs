@@ -29,6 +29,7 @@ export interface Courses {
     title:string,
     description:string,
     totalQuestions:number,
+    image:string,
 }
 
 export interface ExamSubjects{
@@ -37,6 +38,7 @@ export interface ExamSubjects{
     description:string,
     courseId:number,
     questionNumbers:number,
+    image:string,
 }
 
 export interface Exams {
@@ -45,7 +47,8 @@ export interface Exams {
     description:string,
     duration:number,
     examSubjectId:number,
-    questionNumbers:number
+    questionNumbers:number,
+    image:string
 }
 
 export interface Questions {
