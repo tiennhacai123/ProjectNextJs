@@ -47,3 +47,6 @@ export const updateUser = async (id: number, updatedData: Partial<Users>) => {
     throw error;
   }
 };
+export const updateUserProfile = async (userId: number, updatedData: Partial<Users>): Promise<void> => {
+  await axios.put(`${API_URL}/${userId}`, updatedData);
+};

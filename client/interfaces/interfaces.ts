@@ -70,3 +70,12 @@ export interface Admin {
     email:string,
     password:string | number,
 }
+// Trong interfaces/interfaces.ts
+export interface ExamHistory {
+    id: number;
+    userId: number;
+    examId: number;
+    score: number;
+    totalQuestions: number; // Thêm thuộc tính này
+  }
+  

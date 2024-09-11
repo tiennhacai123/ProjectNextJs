@@ -101,21 +101,23 @@
       "status": false
     },
     {
-      "username": "LHM Vỹ",
-      "email": "vy2006@gmail.com",
-      "password": "123456",
-      "repassword": "123456",
-      "profilePicture": "",
-      "role": 1,
-      "status": true,
+      "username": "LH Minh V",
+      "email": "vy2005@gmail.com",
+      "profilePicture": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam4.jpg?alt=media&token=6884e1a6-9616-47cc-87bf-625310400b32",
       "id": 11
+    },
+    {
+      "username": "Lê Diên Tiến",
+      "email": "ledientien2005@gmail.com",
+      "profilePicture": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam3.jpg?alt=media&token=9a0b0e83-1bec-47e0-a1c9-c3499ebc7e6d",
+      "id": 12
     }
   ],
   "courses": [
     {
       "title": "Khóa luyện thi THPT",
       "description": "Khóa luyện thi dành cho học sinh lớp 10,11,12,13",
-      "totalQuestions": "23",
+      "totalQuestions": 23,
       "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fcourse2.jpg?alt=media&token=b9c3b0c7-c5c5-4e72-a9aa-a171ab38032c",
       "id": 2
     },
@@ -214,7 +216,7 @@
       "title": "Tiếng Anh 20 câu",
       "courseId": 66,
       "description": "Dành cho 100+",
-      "questionNumbers": "20",
+      "questionNumbers": 20,
       "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub1.jpg?alt=media&token=ff85651a-c0e3-4407-b8cb-66cd96391d01",
       "id": 8
     }
@@ -224,25 +226,25 @@
       "title": "Toán cơ bản lớp 11",
       "examSubjectId": 3,
       "description": "Đề thi toán học THPT Chuyên Hùng Vương 123",
-      "questionNumbers": "20",
-      "duration": "120",
-      "image":"https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam2.jpg?alt=media&token=e4a927fc-0589-410d-8b12-bc14f4c67dd8",
+      "questionNumbers": 20,
+      "duration": 120,
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam2.jpg?alt=media&token=e4a927fc-0589-410d-8b12-bc14f4c67dd8",
       "id": 1
     },
     {
       "title": "Đề thi Vật lí cơ bản lớp 11",
       "examSubjectId": 6,
       "description": "Đề thi gồm các câu hỏi cơ bản về vật lí lớp 11",
-      "questionNumbers": "20",
+      "questionNumbers": 20,
       "duration": 60,
-      "image":"https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam3.jpg?alt=media&token=3f083413-74d7-4d9c-9520-cfbc1a705d7b",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam3.jpg?alt=media&token=3f083413-74d7-4d9c-9520-cfbc1a705d7b",
       "id": 2
     },
     {
       "title": "Đề thi hóa học nâng cao lớp 12",
       "examSubjectId": 5,
       "description": "Danh cho các học sinh lớp 12",
-      "questionNumbers": "20",
+      "questionNumbers": 20,
       "duration": 60,
       "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam4.jpg?alt=media&token=02cda876-0ee7-4486-a115-4d4fc7be180e",
       "id": 4
@@ -253,15 +255,15 @@
       "description": "Dành cho học sinh lớp 12",
       "questionNumbers": 20,
       "duration": 90,
-      "image":"https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam1.jpg?alt=media&token=358a7cad-4348-467e-8343-6f72cbd1b2cd",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam1.jpg?alt=media&token=358a7cad-4348-467e-8343-6f72cbd1b2cd",
       "id": 5
     },
     {
-      "title": "Tiếng anh cấp quốc gia nawm 2024",
+      "title": "Tiếng anh cấp quốc gia năm 2024",
       "examSubjectId": 4,
       "description": "Dành cho các học sinh lớp 5,9,12 tham gia",
-      "questionNumbers": "69",
-      "duration": "96",
+      "questionNumbers": 69,
+      "duration": 96,
       "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam5.jpg?alt=media&token=7c2c9d82-2fa5-4f1c-9afb-6bf5151a0275",
       "id": 6
     }
@@ -1170,7 +1172,7 @@
       ]
     }
   ],
-  "userAnswer": [
+  "userScore": [
     {
       "id": 1,
       "userId": 1,

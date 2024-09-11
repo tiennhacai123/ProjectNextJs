@@ -24,3 +24,4 @@ export const getExamSubjectsByCourseId = async (courseId: number): Promise<ExamS
     const response = await axios.get(`${API_URL}?courseId=${courseId}`);
     return response.data;
   };
+  
