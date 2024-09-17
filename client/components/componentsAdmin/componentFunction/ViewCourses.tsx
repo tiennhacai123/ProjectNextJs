@@ -33,10 +33,8 @@ export default function ViewCourses() {
       setCourses((prevCourses) =>
         prevCourses.filter((course) => course.id !== courseId)
       );
-      setSuccessMessage('Xóa khóa học thành công');
     } catch (err) {
       console.log(err);
-      setErrorMessage('Có lỗi xảy ra khi xóa khóa học');
     }
   };
 
@@ -68,10 +66,10 @@ export default function ViewCourses() {
           )
         );
         setSelectedCourse(null); // Đóng form sau khi cập nhật
-        setSuccessMessage('Cập nhật khóa học thành công');
+        // setSuccessMessage('Cập nhật khóa học thành công');
       } catch (err) {
         console.log(err);
-        setErrorMessage('Có lỗi xảy ra khi cập nhật khóa học');
+        // setErrorMessage('Có lỗi xảy ra khi cập nhật khóa học');
       }
     }
   };

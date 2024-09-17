@@ -38,7 +38,7 @@
       "email": "user4@example.com",
       "role": 3,
       "profilePicture": "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/anh-meme-meo-13.jpg",
-      "status": true
+      "status": false
     },
     {
       "id": 5,
@@ -101,16 +101,34 @@
       "status": false
     },
     {
-      "username": "LH Minh V",
-      "email": "vy2005@gmail.com",
-      "profilePicture": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam4.jpg?alt=media&token=6884e1a6-9616-47cc-87bf-625310400b32",
+      "username": "Lê Diên Tiến",
+      "email": "ledientien2005@gmail.com",
+      "profilePicture": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub4.jpg?alt=media&token=231e2561-483a-4acb-aad7-b8070d491398",
+      "password": "$2a$10$2/bYqLmmRdV0XrCkR0WEa.M5ED7CSOcZ8cLzLQFuSc7UsBACMWsbS",
+      "repassword": "$2a$10$2/bYqLmmRdV0XrCkR0WEa.M5ED7CSOcZ8cLzLQFuSc7UsBACMWsbS",
+      "role": 1,
+      "status": true,
       "id": 11
     },
     {
-      "username": "Lê Diên Tiến",
-      "email": "ledientien2005@gmail.com",
-      "profilePicture": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam3.jpg?alt=media&token=9a0b0e83-1bec-47e0-a1c9-c3499ebc7e6d",
+      "username": "LHM Vỹ",
+      "email": "vy2006@gmail.com",
+      "password": "$2a$10$Lc5TXc.TlBl9FwdwAKauWuln/QfkNxaeFEgBWqjcH6Ag5mYJtuetC",
+      "repassword": "$2a$10$Lc5TXc.TlBl9FwdwAKauWuln/QfkNxaeFEgBWqjcH6Ag5mYJtuetC",
+      "profilePicture": "",
+      "role": 1,
+      "status": false,
       "id": 12
+    },
+    {
+      "username": "Lê Tiến",
+      "email": "ledientien05@gmail.com",
+      "profilePicture": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub2.jpg?alt=media&token=eba70c6a-9f06-4d81-a6a3-ddc47bde57ca",
+      "password": "$2a$10$TL7Wiw5x9zxc5BYKxe4O9OSR6tauSrM1q7ks9m8XpZQXfqHKRbLmq",
+      "repassword": "$2a$10$TL7Wiw5x9zxc5BYKxe4O9OSR6tauSrM1q7ks9m8XpZQXfqHKRbLmq",
+      "role": 1,
+      "status": true,
+      "id": 13
     }
   ],
   "courses": [
@@ -151,7 +169,7 @@
     },
     {
       "title": "Khoá Luyện Thi Toeic",
-      "description": "Dành Cho Các Bạn Muốn Lấy 800+ ",
+      "description": "Dành Cho Các Bạn Muốn Lấy 900+ ",
       "totalQuestions": 200,
       "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fcourse1.jpg?alt=media&token=7d78ee0b-9a8c-41df-a691-2ca7c53adc6d",
       "id": 66
@@ -164,19 +182,19 @@
       "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fcourse1.jpg?alt=media&token=0c619e64-8b6a-4f82-a2c2-c2d2edfa6eca"
     },
     {
-      "id": 913,
       "title": "Khoá luyện thi cấp 2",
-      "description": "Khoá luyện thi dành cho các bạn lớp5",
+      "description": "Khoá luyện thi dành cho các bạn lớp 5",
       "totalQuestions": 40,
-      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub2.jpg?alt=media&token=7514e2b8-4c7a-472a-9198-907f8596ee6c"
+      "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub2.jpg?alt=media&token=7514e2b8-4c7a-472a-9198-907f8596ee6c",
+      "id": 913
     }
   ],
   "examSubject": [
     {
       "title": "Olympic Toán Quốc Gia",
-      "description": "Dành cho các bạn học sinh cấp 3",
-      "questionNumbers": 50,
       "courseId": 2,
+      "description": "Dành cho các bạn học sinh cấp 3",
+      "questionNumbers": "30",
       "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub3.jpg?alt=media&token=89070891-c4a3-4ee0-95a3-8adc84e85df0",
       "id": 3
     },
@@ -227,7 +245,7 @@
       "examSubjectId": 3,
       "description": "Đề thi toán học THPT Chuyên Hùng Vương 123",
       "questionNumbers": 20,
-      "duration": 120,
+      "duration": "60",
       "image": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2Fexam2.jpg?alt=media&token=e4a927fc-0589-410d-8b12-bc14f4c67dd8",
       "id": 1
     },

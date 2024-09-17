@@ -2,14 +2,17 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import bcrypt from 'bcryptjs'; 
 import { getUserById, updateUserProfile } from '@/services/userClient.service';
 import { Users } from '@/interfaces/interfaces';
-import { uploadImage } from '@/config/firebase'; // Đảm bảo bạn đã tạo service này
+import { uploadImage } from '@/config/firebase';
 
 export default function ProfilePage() {
   const [user, setUser] = useState<Users | null>(null);
   const [newUsername, setNewUsername] = useState('');
   const [newEmail, setNewEmail] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [reNewPassword, setReNewPassword] = useState('');
   const [newProfilePicture, setNewProfilePicture] = useState<File | null>(null);
   const router = useRouter();
 
@@ -42,6 +45,12 @@ export default function ProfilePage() {
   const handleUpdateProfile = async () => {
     if (!user) return;
 
+    // Kiểm tra nếu mật khẩu mới không khớp
+    if (newPassword && newPassword !== reNewPassword) {
+      console.error('Mật khẩu mới không khớp.');
+      return;
+    }
+
     let profilePictureUrl = user.profilePicture;
 
     if (newProfilePicture) {
@@ -53,15 +62,39 @@ export default function ProfilePage() {
       }
     }
 
+    // Mã hóa mật khẩu mới nếu có
+    let hashedPassword = user.password;
+    if (newPassword) {
+      try {
+        const salt = await bcrypt.genSalt(10); // Tạo salt
+        hashedPassword = await bcrypt.hash(newPassword, salt); // Mã hóa mật khẩu mới
+      } catch (error) {
+        console.error('Failed to hash password:', error);
+        return;
+      }
+    }
+
     try {
       await updateUserProfile(user.id, {
         username: newUsername,
         email: newEmail,
         profilePicture: profilePictureUrl,
+        // Sử dụng mật khẩu đã mã hóa (hoặc giữ nguyên mật khẩu cũ)
+        password: hashedPassword,
+        repassword: hashedPassword,
+        role: user.role, // Giữ nguyên role
+        status: user.status, // Giữ nguyên status
       });
 
       // Cập nhật dữ liệu vào localStorage
-      const updatedUser = { ...user, username: newUsername, email: newEmail, profilePicture: profilePictureUrl };
+      const updatedUser = { 
+        ...user, 
+        username: newUsername, 
+        email: newEmail, 
+        profilePicture: profilePictureUrl,
+        password: hashedPassword, // Cập nhật mật khẩu mới đã mã hóa
+        repassword: hashedPassword, 
+      };
       localStorage.setItem('user', JSON.stringify(updatedUser));
 
       // Optionally, refresh user profile data
@@ -107,6 +140,20 @@ export default function ProfilePage() {
                 placeholder="Email mới"
                 value={newEmail}
                 onChange={(e) => setNewEmail(e.target.value)}
+                className="border border-gray-300 p-2 rounded w-full mb-2"
+              />
+              <input
+                type="password"
+                placeholder="Mật khẩu mới"
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}
+                className="border border-gray-300 p-2 rounded w-full mb-2"
+              />
+              <input
+                type="password"
+                placeholder="Nhập lại mật khẩu mới"
+                value={reNewPassword}
+                onChange={(e) => setReNewPassword(e.target.value)}
                 className="border border-gray-300 p-2 rounded w-full mb-2"
               />
               <input

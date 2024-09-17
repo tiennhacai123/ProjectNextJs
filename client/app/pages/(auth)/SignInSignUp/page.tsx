@@ -4,13 +4,13 @@ import { addUser, getAllUser } from '@/services/userClient.service';
 import { FormData, FormErrors } from '@/interfaces/interfaces';
 import '@/app/assets/signInSignUp.css';
 import { useRouter } from 'next/navigation';
+import bcrypt from 'bcryptjs';
 
 // lay icon tu react icon
 import { FaGoogle } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-
 
 export default function SignInSignup() {
   const route = useRouter();
@@ -69,8 +69,8 @@ export default function SignInSignup() {
     }
 
     // Validate password
-    if (!formData.password || formData.password.length < 6) {
-      newErrors.password = 'Mật khẩu phải có ít nhất 6 ký tự.';
+    if (!formData.password || formData.password.length < 3) {
+      newErrors.password = 'Mật khẩu phải có ít nhất 3 ký tự.';
       isValid = false;
     }
 
@@ -101,53 +101,60 @@ export default function SignInSignup() {
 
     if (isSignUpActive) {
       try {
+        // Mã hóa mật khẩu trước khi gọi API
+        const hashedPassword = await bcrypt.hash(formData.password, 10);
+        // const hashedRePassword = await bcrypt.hash(formData.repassword, 10);
         await addUser({
           username: formData.username,
           email: formData.email,
-          password: formData.password,
+          password: hashedPassword,  
           repassword: formData.repassword,
-          profilePicture: '', // Default value
-          role: 1, // Default value
-          status: true // Default value
+          profilePicture: '',
+          role: 1,
+          status: true
         });
-        alert('Đăng ký thành công');
 
-        // After successful registration, reset form data
+        alert('Đăng ký thành công');
+    
         setFormData({
           email: '',
           password: '',
           repassword: '',
           username: ''
         });
-
-        // Switch to login form
+    
         setIsSignUpActive(false);
       } catch (error) {
         alert('Đăng ký thất bại. Vui lòng thử lại');
       }
     } else {
       try {
-        const response = await getAllUser({
-          email: formData.email,
-          password: formData.password
-        });
-        const user = response.data.find((user: { email: string; password: string; }) => user.email === formData.email && user.password === formData.password);
-        const checkStatus = response.data.find((user: { status: boolean }) => user.status === true);
-        if (checkStatus) {
-          if (user) {
-            localStorage.setItem('user', JSON.stringify(user)); // Save user info to localStorage
-            alert(`Chào mừng, ${user.username}!`);
-            route.push("/");
+        const response = await getAllUser({ email: formData.email });
+        const user = response.data.find(
+          (user: { email: string; password: string; }) => user.email === formData.email
+        );
+
+        if (user) {
+          // So sánh mật khẩu đã mã hóa với mật khẩu đã nhập
+          const isPasswordValid = await bcrypt.compare(formData.password, user.password);
+          if (isPasswordValid) {
+            if (user.status === true) {
+              localStorage.setItem('user', JSON.stringify(user));
+              alert(`Chào mừng, ${user.username}!`);
+              route.push("/");
+            } else {
+              alert('Người dùng đã bị ban.');
+            }
           } else {
-            alert('Đăng nhập thất bại. Email hoặc mật khẩu không đúng.');
+            alert('Đăng nhập thất bại. Mật khẩu không đúng.');
           }
         } else {
-          alert('Người dùng đã bị ban');
+          alert('Đăng nhập thất bại. Email không đúng.');
         }
       } catch (error) {
         alert('Đăng nhập thất bại. Vui lòng thử lại.');
       }
-    }
+    }    
   };
 
   return (
@@ -239,7 +246,6 @@ export default function SignInSignup() {
                 placeholder="Mật Khẩu"
                 value={formData.password}
                 onChange={handleChange}
-                
                 autoComplete="current-password"
               />
               {errors.password && <span className="error">{errors.password}</span>}
