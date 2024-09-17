@@ -116,19 +116,9 @@
       "password": "$2a$10$Lc5TXc.TlBl9FwdwAKauWuln/QfkNxaeFEgBWqjcH6Ag5mYJtuetC",
       "repassword": "$2a$10$Lc5TXc.TlBl9FwdwAKauWuln/QfkNxaeFEgBWqjcH6Ag5mYJtuetC",
       "profilePicture": "",
-      "role": 1,
+      "role": 1,  
       "status": false,
       "id": 12
-    },
-    {
-      "username": "Lê Tiến",
-      "email": "ledientien05@gmail.com",
-      "profilePicture": "https://firebasestorage.googleapis.com/v0/b/ptit-729c7.appspot.com/o/courses%2FexamSub2.jpg?alt=media&token=eba70c6a-9f06-4d81-a6a3-ddc47bde57ca",
-      "password": "$2a$10$TL7Wiw5x9zxc5BYKxe4O9OSR6tauSrM1q7ks9m8XpZQXfqHKRbLmq",
-      "repassword": "$2a$10$TL7Wiw5x9zxc5BYKxe4O9OSR6tauSrM1q7ks9m8XpZQXfqHKRbLmq",
-      "role": 1,
-      "status": true,
-      "id": 13
     }
   ],
   "courses": [

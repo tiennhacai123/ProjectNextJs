@@ -25,8 +25,13 @@ export default function Home() {
   }, []);
 
   const handleClick = (id: number) => {
-    router.push(`/subject/${id}`);
-    localStorage.setItem("idCourse", JSON.stringify(id));
+    const user = localStorage.getItem("user"); // Kiểm tra nếu có ID người dùng trong localStorage
+    if (user) {
+      router.push(`/subject/${id}`);
+      localStorage.setItem("idCourse", JSON.stringify(id));
+    } else {
+      alert("Bạn phải đăng nhập để lựa chọn khóa học");
+    }
   };
 
   return (
@@ -39,7 +44,7 @@ export default function Home() {
             <div className="carousel-inner relative overflow-hidden w-full">
               {[
                 {
-                  imgSrc: "https://xcdn-cf.vuihoc.vn/upload/5c209fe6176b0/2022/10/24/14bd_-E1-BA-A2nh-banner-website-03.jpg", // Replace with actual image paths
+                  imgSrc: "https://xcdn-cf.vuihoc.vn/upload/5c209fe6176b0/2022/10/24/14bd_-E1-BA-A2nh-banner-website-03.jpg", // Thay thế bằng đường dẫn ảnh thực tế
                   captionTitle: "Khóa luyện thi THPT",
                   captionText: "Khóa luyện thi dành cho học sinh lớp 10,11,12,13",
                 },
@@ -157,7 +162,7 @@ export default function Home() {
                 onClick={() => handleClick(course.id)}
               >
                 <img
-                  src={course.image} // Replace with actual image path if available
+                  src={course.image} // Thay thế bằng đường dẫn ảnh thực tế nếu có
                   alt={course.title}
                   className="w-full h-48 object-cover"
                 />
